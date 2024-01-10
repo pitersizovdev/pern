@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { createContext } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App';
+import UserStorage from './storage/UserStorage';
+import ArticleStorage from './storage/ArticleStorage';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+export const Context = createContext(null);
+
+const root = createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <Context.Provider value={{
+    user: new UserStorage(),
+    article: new ArticleStorage(),
 
+  }}>
+    <App />
+  </Context.Provider>,
+);
