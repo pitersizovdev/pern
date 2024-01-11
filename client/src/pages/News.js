@@ -1,9 +1,14 @@
 import React from 'react'
+import CategoryFilter from '../components/CategoryFilter';
+import CoinFilter from '../components/CoinFilter';
+import ArticleList from '../components/ArticleList';
 
 const News =()=> {
   return (
-    <div>
-        News
+    <div className='container'>
+      <CategoryFilter/>
+      <CoinFilter/>
+      <ArticleList/>
     </div>
   )
 }

@@ -1,0 +1,51 @@
+/* Стили для карточки */
+.articleCard {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    max-width: 200px; /* Устанавливаем максимальную ширину карточки */
+    margin: 10px; /* Расстояние между карточками */
+  }
+  
+  /* Стили для изображения в карточке */
+  .articleCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 0 0; /* Скругление верхних краев */
+  }
+  
+  /* Стили для плашки с заголовком */
+  .titleShield {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Скругление нижних краев */
+  }
+  
+  /* Дополнительные стили для текста заголовка */
+  .titleShield h3 {
+    margin: 0;
+  }
+  
+  /* Стили для рейтинга */
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Стили для иконки рейтинга */
+  .articleRating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .articleRating svg {
+    margin-left: 5px;
+  }

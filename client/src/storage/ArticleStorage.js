@@ -17,31 +17,34 @@ export default class ArticleStorage{
             {id:5, name:'Dogecoin'}
         ]
         this._articles = [
-            {id:1, title:'Article Title', 
+            {id:1, title:'Article1', 
             description:'Description of article',
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
 
-            {id:2, title:'Article Title', 
+            {id:2, title:'Article2', 
             description:'Second description of article',
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
 
-            {id:3, title:'Article Title', 
+            {id:3, title:'Article3', 
             description:'Third description of article',
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
 
-            {id:4, title:'Article Title', 
+            {id:4, title:'Article4e', 
             description:'Fourth description of article',
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
 
-            {id:5, title:'Article Title', 
+            {id:5, title:'Article5', 
             description:'Fifth description of article',
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
         ]
+        this._selectedCategory = {}
+        this._selectedCoin = {}
+
         makeAutoObservable(this)
     }
 
@@ -58,6 +61,15 @@ export default class ArticleStorage{
         this._articles = articles
     }
 
+    setSelectedCategory(category){
+        this._selectedCategory = category
+    }
+
+    setSelectedCoin(coin){
+        this._selectedCoin = coin
+    }
+
+
 //State getters
     get categories(){
         return this._categories
@@ -71,4 +83,12 @@ export default class ArticleStorage{
         return this._articles
     }
 
+    get selectedCategory(){
+        return this._selectedCategory
+    }
+
+
+    get selectedCoin(){
+        return this._selectedCoin
+    }
 }

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import UserStorage from './storage/UserStorage';
 import ArticleStorage from './storage/ArticleStorage';
+import './styles/index.css'
 
 export const Context = createContext(null);
 

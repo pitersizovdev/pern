@@ -1,0 +1,21 @@
+.coinList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 10px 0;
+  }
+  
+  .coinList li {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff; /* Adjust the default text color */
+  }
+  
+  .coinList li.active {
+    background-color: #72bc76;
+    color: #000;
+  }
