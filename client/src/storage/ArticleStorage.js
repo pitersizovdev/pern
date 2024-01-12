@@ -42,6 +42,15 @@ export default class ArticleStorage{
             img: 'https://happycoin.club/wp-content/uploads/2023/06/geri-gensler-sec.jpg',
             rating: 5},
         ]
+
+        this._articlesInfo = [
+            {id:1, 
+            content:'Content is not a description of article Content is not a description of article Article1 Content is not a description of article Article1 Article1',
+            },
+            {id:2, 
+                content:'Content is not a description of article Article2 Content is not a description of article Content is not a description of article Article2 ',
+                },
+        ]
         this._selectedCategory = {}
         this._selectedCoin = {}
 
