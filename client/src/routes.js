@@ -8,17 +8,17 @@ import Profile from "./pages/Profile";
 import { ADMIN_ROUTE, ARTICLE_ROUTE, EXCH_ROUTE, LOGIN_ROUTE, MAIN_ROUTE, NEWS_ROUTE, PROFILE_ROUTE, REGISTARTION_ROUTE } from "./utils/consts";
 
 
-export const authRoutes=[
+export const authRoutes = [
     {
-        path: ADMIN_ROUTE,
-        Component: Admin
+      path: ADMIN_ROUTE,
+      Component: Admin
     },
     {
-        path: PROFILE_ROUTE,
-        Component: Profile
-    },
-
-]
+      path: PROFILE_ROUTE,
+      Component: Profile
+    }
+  ];
+  
 
 export const publicRoutes=[
     {

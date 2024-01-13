@@ -1,0 +1,15 @@
+.coins, .categories{
+    color: black;
+}
+
+option {
+    color: black; /* Задаем черный цвет текста */
+  }
+
+  input{
+    color: black;
+  }
+
+  .createImg{
+    color: white;
+  }
