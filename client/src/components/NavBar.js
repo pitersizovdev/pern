@@ -18,6 +18,11 @@ const NavBar = observer(() => {
     setIsMenuOpen(!isMenuOpen); // Изменяем состояние для открытия/закрытия меню
   };
 
+  const logOut = () => {
+    user.setUser({})
+    user.setIsAuth(false)
+  }
+
   return (
     <header>
       <div className='navBar'>
@@ -31,38 +36,21 @@ const NavBar = observer(() => {
         {user.isAuth ?
           (<div className='btn'>
             <button onClick={()=> navigate(ADMIN_ROUTE)}>Панель</button>
-            <button onClick={()=> navigate(LOGIN_ROUTE)}>Выйти</button>
-          </div>) :
+            <button onClick={()=> logOut()}>Выйти</button>
+          </div>) 
+          :
           (<div className='btn'>
-            <button onClick={() => user.setIsAuth(true)}>Авторизация</button>
+            <button onClick={() => navigate(LOGIN_ROUTE)}>Авторизация</button>
           </div>)
         }
-
-
-
-
-
-
-
-
 
         <div className='toggleBtn' onClick={handleToggleMenu}> {/* Добавляем обработчик события на клик */}
           <HiOutlineMenu />
         </div>
-        <div className={`menu ${isMenuOpen ? 'open' : ''}`}> {/* Используем состояние для добавления класса 'open' */}
+        <div className={`menu ${isMenuOpen ? 'open' : ''}`}> 
           <li><NavLink to={MAIN_ROUTE}>Главная</NavLink></li>
           <li><NavLink to={NEWS_ROUTE}>Новости</NavLink></li>
           <li><NavLink to={EXCH_ROUTE}>Обмен</NavLink></li>
-
-          {user.isAuth ?
-            (<div className='menuBtn'>
-              <button >Панель</button>
-              <button>Выйти</button>
-            </div>) :
-            (<div className='menuBtn'>
-              <button onClick={() => user.setIsAuth(true)}>Авторизация</button>
-            </div>)
-          }
         </div>
       </div>
     </header>

@@ -110,7 +110,7 @@ button{
 }
 
 .menu.open{
-  height: 190px;
+  height: 250px;
 }
 
 @media(max-width: 720px){
