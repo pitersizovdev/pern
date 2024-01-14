@@ -13,7 +13,7 @@ const Article =()=> {
     }
   return (
     <div className='articleContent'>
-        <img className='articlePic'src={article.img}></img>
+        <img className='articlePic'src={article.img} alt=''></img>
         <h1 className='articleTitle'>{article.title}</h1>
         <h2 className='articleDescription'>{article.description}</h2>
         <div className='articleText'><p>{info.content}</p></div>
